@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wisma Primkokarmar Ditjen Hubla</title>
   <style>
     body {
@@ -12,24 +12,53 @@
       background-color: #f5f5f5;
     }
 
-    header {
+    .header {
       background-color: #004080;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    nav a:hover {
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-title img {
+      height: 50px;
+    }
+
+    .logo-title h1 {
+      font-size: 20px;
+      margin: 0;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
       text-decoration: underline;
     }
 
@@ -107,142 +136,111 @@
     }
 
     @media (max-width: 768px) {
-      .room-list {
-        flex-direction: column;
-      }
-
-      header {
+      .header-container {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      nav {
-        display: flex;
-        flex-wrap: wrap;
+      .logo-title img {
+        height: 40px;
+      }
+
+      .logo-title h1 {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: center;
         gap: 10px;
         margin-top: 10px;
       }
 
-      img {
-        max-width: 100%;
-        height: auto;
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .room-list {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-<!-- BODY CONTENT OMITTED FOR BREVITY (unchanged) -->
-</body>
-</html>
-
 
   <!-- HEADER -->
-  <header style="display: flex; align-items: center; justify-content: space-between; background-color:#004080; padding:20px; position:sticky; top:0; z-index:1000;">
-    <div style="display: flex; align-items: center;">
-      <img src="Logo_Kementerian_Perhubungan_Indonesia_(Kemenhub).png" alt="Logo Kemenhub" style="height: 60px; margin-right: 15px;">
-      <h1 style="color:white; margin:0;">Wisma Primkokarmar Ditjen Hubla</h1>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-title">
+        <img src="Logo_Kementerian_Perhubungan_Indonesia_(Kemenhub).png" alt="Logo Kemenhub">
+        <h1>Wisma Primkokarmar Ditjen Hubla</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="#beranda">Beranda</a>
+        <a href="#kamar">Kamar</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#reservasi">Reservasi</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
     </div>
-    <h1>Wisma Primkokarmar Ditjen Hubla</h1>
-    <nav>
-      <a href="#beranda">Beranda</a>
-      <a href="#kamar">Kamar</a>
-      <a href="#fasilitas">Fasilitas</a>
-      <a href="#reservasi">Reservasi</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
   </header>
 
   <main>
     <!-- BERANDA -->
     <section id="beranda">
       <h2>Selamat Datang</h2>
-      <p> Wisma Primkokarmar Ditjen Hubla Puncak Bogor. Kami menyediakan berbagai tipe kamar dengan fasilitas lengkap untuk kenyamanan Anda.</p>
-    <div style="width: 200px; text-align: center;">
-      <img src="wisma.jpeg" alt="Kolam Renang" style="width: 200%; border-radius: 10px;">
-      <p></p>
-    </div>
+      <p>Wisma Primkokarmar Ditjen Hubla Puncak Bogor. Kami menyediakan berbagai tipe kamar dengan fasilitas lengkap untuk kenyamanan Anda.</p>
+      <div style="width: 200px; text-align: center;">
+        <img src="wisma.jpeg" alt="Wisma" style="width: 200%; border-radius: 10px;">
+      </div>
     </section>
 
-   <!-- KAMAR -->
-<section id="kamar">
-  <h2>Daftar Tipe Kamar</h2>
-  <div class="room-list">
-    <div class="room">
-      <img src="kamar-type-a.jpeg" alt="Kamar Type A">
-      <h3>Kamar Type A</h3>
-      <p>3 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
-    </div>
-    <div class="room">
-      <img src="kamar-type-b.jpeg" alt="Kamar Type B">
-      <h3>Kamar Type B</h3>
-      <p>3 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
-    </div>
-    <div class="room">
-      <img src="kamar-type-c.jpeg" alt="Kamar Type C">
-      <h3>Kamar Type C</h3>
-      <p>3 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
-    </div>
-    <div class="room">
-      <img src="kamar-type-d.jpeg" alt="Kamar Type D">
-      <h3>Kamar Type D</h3>
-      <p>1 Queen Bed dan 1 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
-    </div>
-    <div class="room">
-      <img src="kamar-type-suite.jpeg" alt="Kamar Type Suite">
-      <h3>Kamar Type Suite</h3>
-      <p>1 King Bed, 1 kamar mandi dalam bathtub, TV, kulkas, lemari, kitchen set, ruang tamu depan</p>
-    </div>
-  </div>
-</section>
+    <!-- KAMAR -->
+    <section id="kamar">
+      <h2>Daftar Tipe Kamar</h2>
+      <div class="room-list">
+        <div class="room">
+          <img src="kamar-type-a.jpeg" alt="Kamar Type A">
+          <h3>Kamar Type A</h3>
+          <p>3 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
+        </div>
+        <div class="room">
+          <img src="kamar-type-b.jpeg" alt="Kamar Type B">
+          <h3>Kamar Type B</h3>
+          <p>3 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
+        </div>
+        <div class="room">
+          <img src="kamar-type-c.jpeg" alt="Kamar Type C">
+          <h3>Kamar Type C</h3>
+          <p>3 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
+        </div>
+        <div class="room">
+          <img src="kamar-type-d.jpeg" alt="Kamar Type D">
+          <h3>Kamar Type D</h3>
+          <p>1 Queen Bed dan 1 Twin Bed, 1 kamar mandi dalam, TV, AC, Lemari dan ruang tamu depan</p>
+        </div>
+        <div class="room">
+          <img src="kamar-type-suite.jpeg" alt="Kamar Type Suite">
+          <h3>Kamar Type Suite</h3>
+          <p>1 King Bed, 1 kamar mandi dalam bathtub, TV, kulkas, lemari, kitchen set, ruang tamu depan</p>
+        </div>
+      </div>
+    </section>
 
     <!-- FASILITAS -->
- <section id="fasilitas">
-  <h2>Fasilitas</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    
-    <div style="width: 200px; text-align: center;">
-      <img src="Office.jpeg" alt="Office Room" style="width: 100%; border-radius: 8px;">
-      <p>Office Room</p>
-    </div>
-
-    <div style="width: 200px; text-align: center;">
-      <img src="Kolam Renang.jpeg" alt="Kolam Renang" style="width: 100%; border-radius: 8px;">
-      <p>Kolam Renang</p>
-    </div>
-
-    <div style="width: 200px; text-align: center;">
-      <img src="Joglo.jpeg" alt="Joglo Serbaguna" style="width: 100%; border-radius: 8px;">
-      <p>Joglo Serbaguna</p>
-    </div>
-
-    <div style="width: 200px; text-align: center;">
-      <img src="ruang rapat.jpeg" alt="Ruang Rapat" style="width: 100%; border-radius: 8px;">
-      <p>Ruang Rapat</p>
-    </div>
-
-    <div style="width: 200px; text-align: center;">
-      <img src="minum.jpeg" alt="makanminum" style="width: 100%; border-radius: 8px;">
-      <p>Ruang Coffee Break</p>
-    </div>
-
-    <div style="width: 200px; text-align: center;">
-      <img src="lapangan.jpeg" alt="lapangan" style="width: 100%; border-radius: 8px;">
-      <p>Lapangan Olahraga </p>
-    </div>
-
-    <div style="width: 200px; text-align: center;">
-      <img src="Mushola (1).jpeg" alt="Mushola" style="width: 100%; border-radius: 8px;">
-      <p>Mushola</p>
-    </div>
-
-       <div style="width: 200px; text-align: center;">
-      <img src="parkir.jpeg" alt="Parkir Luas" style="width: 100%; border-radius: 8px;">
-      <p>Parkir Luas</p>
-    </div>
-
-  </div>
-</section>
-
+    <section id="fasilitas">
+      <h2>Fasilitas</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div style="width: 200px; text-align: center;"><img src="Office.jpeg" alt="Office Room" style="width: 100%; border-radius: 8px;"><p>Office Room</p></div>
+        <div style="width: 200px; text-align: center;"><img src="Kolam Renang.jpeg" alt="Kolam Renang" style="width: 100%; border-radius: 8px;"><p>Kolam Renang</p></div>
+        <div style="width: 200px; text-align: center;"><img src="Joglo.jpeg" alt="Joglo Serbaguna" style="width: 100%; border-radius: 8px;"><p>Joglo Serbaguna</p></div>
+        <div style="width: 200px; text-align: center;"><img src="ruang rapat.jpeg" alt="Ruang Rapat" style="width: 100%; border-radius: 8px;"><p>Ruang Rapat</p></div>
+        <div style="width: 200px; text-align: center;"><img src="minum.jpeg" alt="makanminum" style="width: 100%; border-radius: 8px;"><p>Ruang Coffee Break</p></div>
+        <div style="width: 200px; text-align: center;"><img src="lapangan.jpeg" alt="lapangan" style="width: 100%; border-radius: 8px;"><p>Lapangan Olahraga</p></div>
+        <div style="width: 200px; text-align: center;"><img src="Mushola (1).jpeg" alt="Mushola" style="width: 100%; border-radius: 8px;"><p>Mushola</p></div>
+        <div style="width: 200px; text-align: center;"><img src="parkir.jpeg" alt="Parkir Luas" style="width: 100%; border-radius: 8px;"><p>Parkir Luas</p></div>
+      </div>
+    </section>
 
     <!-- RESERVASI -->
     <section id="reservasi">
@@ -250,19 +248,14 @@
       <form onsubmit="kirimWhatsapp(event)">
         <label>Nama Lengkap</label>
         <input type="text" name="nama" required>
-
         <label>Email</label>
         <input type="email" name="email" required>
-
         <label>Telepon</label>
         <input type="tel" name="telepon" required>
-
         <label>Tanggal Check-in</label>
         <input type="date" name="checkin" required>
-
         <label>Tanggal Check-out</label>
         <input type="date" name="checkout" required>
-
         <label>Pilih Tipe Kamar</label>
         <select name="tipe_kamar" required>
           <option value="Type A">Kamar Type A</option>
@@ -271,10 +264,8 @@
           <option value="Type D">Kamar Type D</option>
           <option value="Suite">Kamar Suite</option>
         </select>
-
         <label>Catatan Tambahan</label>
         <textarea name="catatan" rows="4" placeholder="Contoh: Check-in malam, permintaan khusus..."></textarea>
-
         <button type="submit">Kirim Reservasi via WhatsApp</button>
       </form>
     </section>
@@ -332,6 +323,5 @@ Terima kasih.`;
       window.open(url, "_blank");
     }
   </script>
-
 </body>
 </html>
